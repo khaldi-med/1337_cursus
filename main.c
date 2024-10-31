@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/10/31 01:38:57 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:48:08 by mohammed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	printf("-->My_func: is %d\n-->Origin: %d", ft_isalnum(126), isdigit(126));
+	printf("-->My_func: is %d\n-->Origin: %d", ft_isalnum(126), isalnum(126));
 	/*ft_isdigit();
 	printf("-->My_func: is %d\n-->Origin: %d", ft_isdigit(49), isdigit(49));
 	*/
