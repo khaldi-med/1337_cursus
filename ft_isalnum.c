@@ -6,12 +6,13 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 01:17:55 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/10/31 01:38:07 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/10/31 21:52:33 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
@@ -26,6 +27,7 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+*/
 
 int	ft_isalnum(int c)
 {
