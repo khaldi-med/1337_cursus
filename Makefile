@@ -1,2 +1,1 @@
-libft.a: libft.h
 
