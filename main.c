@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/02 02:29:36 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/02 22:34:23 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,23 @@
 
 int	main(void)
 {
-	const char	*str = "Nice Try!";
+	const char	*str = "TeeL Codes";
+	int			c;
 
-	printf("-->My_func: is %zu\n-->Origin: %zu", ft_strlen(str), strlen(str));
+	c = 'L';
+	printf("-->My: %s\n-->Or: %s", ft_strrchr(str, c), strrchr(str, c));
 	/*
-		* ft_isprint();
-		*
-		* printf("-->My_func: is %d\n-->Origin: %d", ft_isprint(32),
-			isprint(32));
+		* ft_strlen();
+		* const char	*str = "Nice Try!";
+		* printf("-->My_func: is %zu\n-->Origin: %zu", ft_strlen(str),
+			strlen(str));
 		*/
+	/*
+			* ft_isprint();
+			*
+			* printf("-->My_func: is %d\n-->Origin: %d", ft_isprint(32),
+				isprint(32));
+			*/
 	/*
 		* ft_isascii();
 		*
