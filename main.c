@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/02 22:34:23 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/03 05:49:45 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,16 @@
 
 int	main(void)
 {
-	const char	*str = "TeeL Codes";
-	int			c;
+	const char	*str1 = "TeeL Codes";
+	const char	*str2 = "";
 
-	c = 'L';
-	printf("-->My: %s\n-->Or: %s", ft_strrchr(str, c), strrchr(str, c));
+	printf("-->My: %d\n-->Or: %d", ft_strncmp(str1, str2, 2), strncmp(str1,
+			str2, 2));
+	// 	int	c;
+	//
+	// 	c = 'L';
+	// 	printf("-->My: %s\n-->Or: %s", ft_strrchr(str, c), strrchr(str, c));
+	//
 	/*
 		* ft_strlen();
 		* const char	*str = "Nice Try!";
