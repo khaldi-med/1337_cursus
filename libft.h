@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/04 23:32:56 by mohkhald         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -5,6 +17,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
 # include <unistd.h>
 
 // My functions
@@ -19,4 +32,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
 #endif
