@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:03:42 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/04 20:06:21 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/05 00:45:38 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *str)
 {
-	const char	*end;
+	size_t	len;
 
-	end = str;
-	while (*end != '\0')
-		end++;
-	return (end - str);
+	len = 0;
+	while (*str != '\0')
+		str++;
+	return (len);
 }
