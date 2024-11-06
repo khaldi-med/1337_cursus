@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 01:13:03 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 02:46:41 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <string.h>
 # include <unistd.h>
 // My functions
+void	*ft_memset(void *str, int c, size_t z);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isalpha(int c);
