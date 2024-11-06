@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:58:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/03 06:15:42 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:09:05 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	unsigned char	*match;
+	const char	*s;
 
-	match = NULL;
-	while (*str != '\0')
+	s = str;
+	while (*s != '\0')
+		s++;
+	if (c == '\0')
+		return ((char *)s);
+	while (s >= str)
 	{
-		if (*str == (char)c)
-			match = (unsigned char *)str;
-		str++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s--;
 	}
-	return ((char *)match);
+	return (NULL);
 }

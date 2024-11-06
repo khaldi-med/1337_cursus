@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 02:15:00 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 02:47:25 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 22:08:00 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	*ft_memset(void *block, int c, size_t size)
 		*str = r;
 		str++;
 		size--;
-		;
 	}
 	return (block);
 }

@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 02:47:37 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 22:36:15 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,23 @@
 
 int	main(void)
 {
-	char	str[20] = "Hello, world!";
+	char	*s1;
+	char	*s2;
 
-	printf("-->My: %s\n-->Or: %s", ft_memset(str, 'X', 5), memset(str, 'X', 5));
+	s1 = "trued";
+	s2 = "true";
+	printf("-->My: %d\n-->Or: %d", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
+	// 	// 	size_t		n;
+	// 	// 	const char	*str2 = "TeeL Codes";
+	// 	// 	const char	*targ = "Codes";
+	// 	s1 = "see FF your FF";
+	// 	s2 = "FF";
+	// 	max = strlen(s1);
+	// 	i1 = strnstr(s1, s2, max);
+	// 	i2 = ft_strnstr(s1, s2, max);
+	// 	printf("-->My: %s\n-->Or: %s", i1, i2);
 	return (0);
 }
-// 	size_t		n;
-// 	const char	*str2 = "TeeL Codes";
-// 	const char	*targ = "Codes";
-//
-// 	n = 15;
-// 	printf("-->My: %s\n-->Or: %s", ft_strnstr(str2, targ, n), strnstr(str2,
-// 			targ, n));
-// 	return (0);
-//}
 // 	size_t		n;
 // 	char		str1[9];
 // 	const char	*str2 = "TeeL Codes";

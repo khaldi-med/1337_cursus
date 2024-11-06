@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:50:24 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 01:48:44 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:06:47 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char	*ft_strnstr(const char *src, const char *target, size_t n)
 {
-	char		*match;
 	const char	*s;
 	const char	*t;
+	size_t		e;
 
-	s = src;
-	t = target;
-	match = (char *)s;
-	if (*target == 0)
+	if (*target == '\0')
 		return ((char *)src);
-	while (*s != '\0' && n > 0)
+	while (*src != '\0' && n > 0)
 	{
-		if (*t == *s)
-			match = (char *)s;
-		while (*s != '\0' && *s == *t && n > 0)
+		s = src;
+		t = target;
+		e = n;
+		while (*s != '\0' && *t != '\0' && *s == *t && e > 0)
 		{
 			s++;
 			t++;
-			n--;
+			e--;
 		}
 		if (*t == '\0')
-			return (match);
-		s++;
+			return ((char *)src);
+		src++;
 		n--;
 	}
-	return (match);
+	return (NULL);
 }

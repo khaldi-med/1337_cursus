@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 02:08:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 02:14:22 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 22:49:43 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	unsigned char	*src;
+
+	src = (unsigned char *)s;
 	while (n > 0)
 	{
-		s = 0;
-		s++;
+		*src = 0;
+		src++;
 		n--;
 	}
 }

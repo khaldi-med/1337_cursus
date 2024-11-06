@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 02:46:41 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 23:14:10 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 # include <unistd.h>
 // My functions
 void	*ft_memset(void *str, int c, size_t z);
+void	*memchr(const void *block, int c, size_t size);
+void	*ft_memcpy(void *to, const void *from, size_t n);
+int		ft_memcmp(const void *a1, const void *a2, size_t size);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isalpha(int c);
