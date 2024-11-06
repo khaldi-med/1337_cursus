@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/05 02:26:54 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 01:09:50 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 int	main(void)
 {
 	size_t		n;
-	char		str1[9];
 	const char	*str2 = "TeeL Codes";
+	const char	*targ = "Codes";
 
-	n = 0;
-	printf("-->My: %zu\n-->Or: %zu", ft_strlcat(str1, str2, n), strlcat(str1,
-			str2, n));
+	n = 15;
+	printf("-->My: %s\n-->Or: %s", ft_strnstr(str2, targ, n), strnstr(str2,
+			targ, n));
 	return (0);
 }
 // 	size_t		n;

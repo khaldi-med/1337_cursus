@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/04 23:32:56 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/06 01:13:03 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-
 // My functions
 int		ft_tolower(int c);
 int		ft_toupper(int c);
@@ -31,6 +30,7 @@ int		ft_isprint(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strchr(const char *str, int c);
+char	*ft_strnstr(const char *src, const char *target, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
