@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 22:40:39 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 05:50:59 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/07 05:14:29 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/07 06:21:46 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *block, int c, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*src;
-	unsigned char	n;
+	void	*value;
+	size_t	t_s;
 
-	src = (unsigned char *)block;
-	n = (unsigned char)c;
-	while (size--)
-	{
-		if (*src == n)
-			return ((void *)src);
-		src++;
-	}
-	return (NULL);
+	t_s = count * size;
+	value = malloc(t_s);
+	if (value)
+		return (ft_memset(value, 0, t_s));
+	return (value);
 }

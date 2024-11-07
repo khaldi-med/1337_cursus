@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 03:01:44 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/07 06:23:55 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	*ft_memset(void *str, int c, size_t z);
 void	*ft_memchr(const void *block, int c, size_t size);
 void	*ft_memcpy(void *to, const void *from, size_t n);
 void	*ft_memmove(void *to, const void *from, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 int		ft_memcmp(const void *a1, const void *a2, size_t size);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
