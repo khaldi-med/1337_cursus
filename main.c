@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 22:36:15 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/07 00:50:40 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@
 int	main(void)
 {
 	char	*s1;
-	char	*s2;
 
-	s1 = "trued";
-	s2 = "true";
-	printf("-->My: %d\n-->Or: %d", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
+	s1 = "trued, let";
+	printf("-->Or: %s, -->My: %s,", memmove(s1 + 7, s1, 5), ft_memmove(s1 + 7,
+			s1, 5));
 	// 	// 	size_t		n;
 	// 	// 	const char	*str2 = "TeeL Codes";
 	// 	// 	const char	*targ = "Codes";
