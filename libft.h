@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 18:29:04 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:17:17 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 # include <unistd.h>
 
 // My libft functions
-void	ft_bzero(void *s, size_t);
+
+// Part I
+void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *str, int c, size_t z);
 void	*ft_memchr(const void *block, int c, size_t size);
 void	*ft_memcpy(void *to, const void *from, size_t n);
@@ -44,5 +46,8 @@ char	*ft_strnstr(const char *src, const char *target, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+// Part II
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
