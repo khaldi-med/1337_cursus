@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 00:48:56 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/07 03:01:44 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	*ft_memmove(void *to, const void *from, size_t size);
 int		ft_memcmp(const void *a1, const void *a2, size_t size);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 00:50:40 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/07 03:46:16 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,26 @@
 
 int	main(void)
 {
-	char	*s1;
+	const char	*s1;
+	const char	*s2;
+	const char	*i1;
+	const char	*i2;
+	size_t		max;
 
-	s1 = "trued, let";
-	printf("-->Or: %s, -->My: %s,", memmove(s1 + 7, s1, 5), ft_memmove(s1 + 7,
-			s1, 5));
+	//
+	// 	s1 = "trued, let";
+	// 	printf("-->Or: %s, -->My: %s,", memmove(s1 + 7, s1, 5), ft_memmove(s1
+	//	+ 7,
+	// 			s1, 5));
 	// 	// 	size_t		n;
 	// 	// 	const char	*str2 = "TeeL Codes";
 	// 	// 	const char	*targ = "Codes";
-	// 	s1 = "see FF your FF";
-	// 	s2 = "FF";
-	// 	max = strlen(s1);
-	// 	i1 = strnstr(s1, s2, max);
-	// 	i2 = ft_strnstr(s1, s2, max);
-	// 	printf("-->My: %s\n-->Or: %s", i1, i2);
+	s1 = "see FF your FF";
+	s2 = "FF";
+	max = strlen(s1);
+	i1 = strnstr(s1, s2, max);
+	i2 = ft_strnstr(s1, s2, max);
+	printf("-->My: %s\n-->Or: %s", i1, i2);
 	return (0);
 }
 // 	size_t		n;
