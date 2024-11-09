@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 23:02:49 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/09 02:25:39 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/09 18:08:36 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_s = malloc(to_len + 1);
 	if (!new_s)
 		return (NULL);
-	// 	while (st >= end)
-	// 	{
-	// 		new_s[st] = s1[st];
-	// 		st++;
-	// 	}
 	ft_memcpy(new_s, &s1[st], to_len);
 	new_s[to_len] = '\0';
 	return (new_s);
