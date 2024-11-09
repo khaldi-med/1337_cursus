@@ -5,52 +5,55 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 01:56:21 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 05:24:51 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/08 23:02:49 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/09 02:25:39 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	match(const char *s1, char const *s2)
+static int	ft_match(const char c, const char *str)
 {
-	char	*p_s1;
-	char	*p_s2;
-	size_t	match;
+	size_t	i;
 
-	p_s1 = (char *)s1;
-	p_s2 = (char *)s2;
-	while (*p_s1)
+	i = 0;
+	while (str[i])
 	{
-		match = 0;
-		while (*p_s1)
-		{
-			if (*p_s1 == *p_s2)
-				match += 1;
-			p_s2++;
-		}
-		p_s1++;
+		if (str[i] == c)
+			return (1);
+		i++;
 	}
-	return (match);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new;
-	char	*p_new;
+	size_t	st;
+	size_t	end;
+	size_t	to_len;
+	char	*new_s;
 
-	new = malloc(match(s1, set) + 1);
-	if (!new)
+	if (!s1 || !set)
 		return (NULL);
-	p_new = new;
-	while (*s1)
-	{
-		if (*s1 != *set)
-			*new = *s1;
-		set++;
-		new ++;
-	}
-	s1++;
-	*new = '\0';
-	return (p_new);
+	st = 0;
+	end = ft_strlen(s1);
+	while (s1[st] && ft_match(s1[st], set))
+		st++;
+	if (st == end)
+		return (ft_strdup(""));
+	end--;
+	while (end > st && ft_match(s1[end], set))
+		end--;
+	to_len = end - st + 1;
+	new_s = malloc(to_len + 1);
+	if (!new_s)
+		return (NULL);
+	// 	while (st >= end)
+	// 	{
+	// 		new_s[st] = s1[st];
+	// 		st++;
+	// 	}
+	ft_memcpy(new_s, &s1[st], to_len);
+	new_s[to_len] = '\0';
+	return (new_s);
 }

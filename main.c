@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 00:57:51 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/09 02:27:28 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <ctype.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int	main(void)
@@ -21,8 +22,8 @@ int	main(void)
 	const char	*s1;
 	const char	*s2;
 
-	s1 = "hello,";
-	s2 = " world";
-	printf("My--> %s", ft_strjoin(s1, s2));
+	s1 = "true, let";
+	s2 = "t";
+	printf("%s", ft_strtrim(s1, s2));
 	return (0);
 }
