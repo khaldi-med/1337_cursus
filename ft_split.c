@@ -6,49 +6,76 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 02:38:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/09 19:44:26 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/10 01:33:45 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_match(const char c, const char *str)
+static size_t	ft_match_d(const char c, const char *str)
+{
+	size_t	count;
+	int		st_w;
+
+	count = 0;
+	st_w = 0;
+	while (*str)
+	{
+		if (*str != c && st_w == 0)
+		{
+			st_w = 1;
+			count++;
+		}
+		else if (*str == c)
+			st_w = 0;
+		str++;
+	}
+	return (count);
+}
+static void	ft_free_arr(char **str, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] == c)
-			return (1);
+		free(str[i]);
 		i++;
 	}
-	return (0);
+	free(str);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	size_t		len;
-	char		**new_s;
-	const char	*p_s;
-	size_t		i;
+	size_t	i;
+	char	**new_s;
+	size_t	j;
+	size_t	index;
 
 	if (!s || !c)
 		return (NULL);
-	len = ft_strlen(s);
-	p_s = s;
 	i = 0;
-	new_s = malloc(len) + 1;
-	if (!new_s)
-		return (NULL);
-	while (*p_s++)
+	j = 0;
+	index = 0;
+	new_s = malloc(ft_match_d(c, s) + 1);
+	while (*s++)
 	{
-		while (*s++)
+		if (s[i] != c)
 		{
-			if (!ft_match(c, s))
+			index = i;
+			while (s[i] && s[i] != c)
 				i++;
-			ft_calloc(i, **new_s);
-			ft_memcpy((unsigned char *)*new_s, s, i);
+			new_s[j] = ft_substr(s, s[index], i);
+			if (!new_s)
+			{
+				ft_free_arr(new_s, j);
+				return (NULL);
+			}
+			j++;
 		}
+		else
+			i++;
 	}
+	new_s[j] = NULL;
 	return (new_s);
 }
