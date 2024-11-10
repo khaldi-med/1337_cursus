@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 02:38:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/10 02:39:37 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/10 02:57:45 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	new_s = malloc(ft_match_d(c, s) + 1);
-	while (s[i])
+	while (s[i++])
 	{
 		while (s[i] == c)
 			i++;
@@ -67,7 +67,8 @@ char	**ft_split(char const *s, char c)
 			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			if (!(new_s[j++] = ft_substr(s, start, i)))
+			new_s[j] = ft_substr(s, start, i);
+			if (!new_s[j++])
 			{
 				ft_free_arr(new_s, j);
 				return (NULL);
