@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 02:38:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/10 01:33:45 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/10 02:39:37 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_match_d(const char c, const char *str)
 	st_w = 0;
 	while (*str)
 	{
-		if (*str != c && st_w == 0)
+		if (*str != c && !st_w)
 		{
 			st_w = 1;
 			count++;
@@ -32,6 +32,7 @@ static size_t	ft_match_d(const char c, const char *str)
 	}
 	return (count);
 }
+
 static void	ft_free_arr(char **str, size_t n)
 {
 	size_t	i;
@@ -50,31 +51,28 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	char	**new_s;
 	size_t	j;
-	size_t	index;
+	size_t	start;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	i = 0;
 	j = 0;
-	index = 0;
 	new_s = malloc(ft_match_d(c, s) + 1);
-	while (*s++)
+	while (s[i])
 	{
-		if (s[i] != c)
+		while (s[i] == c)
+			i++;
+		if (s[i])
 		{
-			index = i;
+			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			new_s[j] = ft_substr(s, s[index], i);
-			if (!new_s)
+			if (!(new_s[j++] = ft_substr(s, start, i)))
 			{
 				ft_free_arr(new_s, j);
 				return (NULL);
 			}
-			j++;
 		}
-		else
-			i++;
 	}
 	new_s[j] = NULL;
 	return (new_s);
