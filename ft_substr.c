@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 02:08:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 00:17:42 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/07 06:37:39 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/10 02:39:40 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*src;
+	size_t	s_len;
+	size_t	i;
+	char	*new;
 
-	src = (unsigned char *)s;
-	while (n > 0)
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (start + len >= s_len)
+		len = s_len - start;
+	i = 0;
+	new = (char *)malloc(len + 1);
+	if (!new)
+		return (NULL);
+	while (i < len && s[start + i])
 	{
-		*src = 0;
-		src++;
-		n--;
+		new[i] = s[start + i];
+		i++;
 	}
+	new[i] = '\0';
+	return (new);
 }
