@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/09 19:50:14 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/11 06:18:42 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,22 @@
 
 int	main(void)
 {
-	const char	*s1;
-	char		s2;
+	char	**result;
+	size_t	i;
 
-	s1 = "true, ,leet, go!";
-	s2 = "c";
-	printf("%s", *ft_split(s1, s2));
+	i = 0;
+	result = ft_split("", ' ');
+	if (!result)
+	{
+		printf("NULL\n");
+		return (0);
+	}
+	while (result[i])
+	{
+		printf("'%s'\n", result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
 	return (0);
 }
