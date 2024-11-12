@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/11 23:01:00 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/12 20:09:24 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/12 20:57:07 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	n;
-	int		sing;
-	char	*s;
-
-	s = (char *)str;
-	n = 0;
-	sing = 1;
-	while ((*s >= 9 && *s <= 13) || *s == ' ')
-		s++;
-	if (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			sing *= -1;
-		s++;
-	}
-	while (*s != '\0' && (*s >= '0' && *s <= '9'))
-	{
-		n = n * 10 + (*s - '0');
-		s++;
-	}
-	return (sing * n);
+	write(fd, &c, 1);
 }

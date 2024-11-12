@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/11 23:01:00 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/12 19:43:04 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/12 20:04:05 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	n;
-	int		sing;
-	char	*s;
+	unsigned int	len;
+	unsigned int	i;
 
-	s = (char *)str;
-	n = 0;
-	sing = 1;
-	while ((*s >= 9 && *s <= 13) || *s == ' ')
-		s++;
-	if (*s == '+' || *s == '-')
+	i = 0;
+	len = ft_strlen(s);
+	while (i < len)
 	{
-		if (*s == '-')
-			sing *= -1;
-		s++;
+		f(i, &s[i]);
+		i++;
 	}
-	while (*s != '\0' && (*s >= '0' && *s <= '9'))
-	{
-		n = n * 10 + (*s - '0');
-		s++;
-	}
-	return (sing * n);
+	s[i] = '\0';
 }

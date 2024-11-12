@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/11 23:01:00 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/12 21:35:44 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/12 21:45:41 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	n;
-	int		sing;
-	char	*s;
-
-	s = (char *)str;
-	n = 0;
-	sing = 1;
-	while ((*s >= 9 && *s <= 13) || *s == ' ')
-		s++;
-	if (*s == '+' || *s == '-')
+	while (s && *s)
 	{
-		if (*s == '-')
-			sing *= -1;
-		s++;
+		write(fd, &*s++, 1);
 	}
-	while (*s != '\0' && (*s >= '0' && *s <= '9'))
-	{
-		n = n * 10 + (*s - '0');
-		s++;
-	}
-	return (sing * n);
+	write(fd, "\n", 1);
 }
