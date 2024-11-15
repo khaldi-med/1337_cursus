@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:50:24 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/06 20:06:47 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/14 19:36:03 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ char	*ft_strnstr(const char *src, const char *target, size_t n)
 
 	if (*target == '\0')
 		return ((char *)src);
-	while (*src != '\0' && n > 0)
+	if (!src && n == 0)
+		return (NULL);
+	while (*src && n > 0)
 	{
 		s = src;
 		t = target;
 		e = n;
-		while (*s != '\0' && *t != '\0' && *s == *t && e > 0)
+		while (*s && *t && *s == *t && e > 0)
 		{
 			s++;
 			t++;

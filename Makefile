@@ -8,26 +8,28 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
 	ft_strnstr.c ft_strrchr.c ft_strjoin.c ft_strdup.c\
 	ft_putnbr_fd.c\
 
-OBJS = ${SRCS:.c=.o}
 NAME = libft.a
-LIBC = ar rcs
+
+OBJS = $(SRCS:.c=.o)
+
 CC = cc
-RM = rm -f
+
 CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+all: $(NAME)
 
-${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-all: ${NAME}
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 clean:
-	${RM} ${OBJS}
+	rm -f $(OBJS)
+
 fclean: clean
-	${RM} ${NAME} 
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY: all clean fclean re
