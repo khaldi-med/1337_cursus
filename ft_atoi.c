@@ -6,9 +6,10 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/11 23:01:00 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/16 06:33:36 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -28,7 +29,7 @@ int	ft_atoi(const char *str)
 			sing *= -1;
 		s++;
 	}
-	while (*s != '\0' && (*s >= '0' && *s <= '9'))
+	while (*s && (*s >= '0' && *s <= '9'))
 	{
 		n = n * 10 + (*s - '0');
 		s++;

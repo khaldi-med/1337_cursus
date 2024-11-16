@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 00:03:42 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/16 05:04:54 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/15 23:05:44 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/15 23:07:39 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	len;
-
-	len = 0;
-	while (*str)
-	{
-		str++;
-		len++;
-	}
-	return (len);
+	t_list
 }

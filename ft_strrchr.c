@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:58:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 22:35:01 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/16 05:10:54 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *str, int c)
 	const char	*s;
 
 	s = str;
-	while (*s != '\0')
+	while (*s)
 		s++;
 	if (c == '\0')
 		return ((char *)s);

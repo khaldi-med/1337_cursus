@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:58:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 22:37:38 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/16 05:06:47 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str != '\0')
+	while (*str)
 	{
 		if (*str == (char)c)
 			return ((char *)str);

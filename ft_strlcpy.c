@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 04:57:28 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/14 06:34:55 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/16 06:30:01 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	s_len;
 
 	s_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (s_len);
 	while (*src && dstsize > 1)
 	{
 		*dst++ = *src++;
 		dstsize--;
 	}
-	if (dstsize > 0)
+	if (dstsize)
 		*dst = '\0';
 	return (s_len);
 }
