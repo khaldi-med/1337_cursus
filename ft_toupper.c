@@ -6,13 +6,13 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:27:22 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/16 08:03:03 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 00:51:49 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - 'a' + 'A');
+		return (c - 32);
 	return (c);
 }

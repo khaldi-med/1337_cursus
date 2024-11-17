@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:40:39 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/08 05:18:56 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 00:59:22 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	*ft_memchr(const void *block, int c, size_t size)
 {
-	unsigned char	*src;
-	unsigned char	n;
+	const unsigned char	*src;
 
-	src = (unsigned char *)block;
-	n = (unsigned char)c;
+	src = block;
 	while (size--)
 	{
-		if (*src == n)
+		if (*src == (unsigned char)c)
 			return ((void *)src);
 		src++;
 	}

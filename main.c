@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/17 13:07:50 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 00:48:16 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,12 @@
 
 int	main(void)
 {
-	char	*src;
-	char	*s;
+	char	src1[14] = "ABCDEFGH";
+	char	src2[14] = "ABCDEFGH";
 
-	src = "Hello, World!";
-	s = "Hello, World!";
-
-	ft_memmove(src + 5, src, 5);
-	memmove(s + 5, s, 5);
-	printf("Dest:%s\n", src);
-	printf("Des: %s\n", s);
+	ft_memcpy(src1, src1 + 2, 4);
+	printf("my: %s\n", src1);
+	memmove(src2, src2 + 2, 4);
+	printf("or: %s\n", src2);
 	return (0);
 }
