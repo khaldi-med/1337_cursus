@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/16 06:33:36 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/17 03:35:03 by mohammed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	n;
+	unsigned long long	n;
 	int		sing;
 	char	*s;
 
