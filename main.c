@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/16 07:54:06 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/17 11:10:13 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 
 int	main(void)
 {
-	//	printf("ORGIN: %s\n", strnstr("fake", ((void *)0), 3));
-	printf("MY: %s", ft_strnstr("fake", ((void *)0), 3));
-	return (0);
+	char buffer[50] = "This is a test string.";
+    ft_memset(buffer + 10, '*', 4);
+    printf("Modified buffer: %s\n", buffer);
+ 	return (0);
 }
