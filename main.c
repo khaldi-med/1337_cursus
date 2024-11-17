@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/17 12:08:43 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/17 13:05:07 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,14 @@
 
 int	main(void)
 {
-	char	*str = "hello, world!";
-	ft_memmove(str + 5, str, 4);
-	printf("String after memmove: %s\n", str);
-	return 0;
+	char	*src;
+	char	dest[20];
+	char	des[20];
+
+	src = "Hello, World!";
+	ft_memmove(dest, src, 12);
+	memmove(des, src, 12);
+	printf("Dest:%s\n", dest);
+	printf("Des: %s\n", des);
+	return (0);
 }
