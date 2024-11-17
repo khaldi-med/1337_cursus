@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/15 20:25:08 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/16 04:48:18 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/17 12:30:55 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,21 +21,23 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
         ft_putnbr_fd.c\
 
 
-all = $(NAME)
-
-NAME = libft.a
 
 OBJ = $(SRCS:.c=.o)
+
+NAME = libft.a
 
 CC = cc
 
 FLAGS = -Wall -Wextra -Werror
+
 
 %.o: %.c libft.h
 	@$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
+
+all: $(NAME)
 
 clean:
 	@rm -f $(OBJ)
