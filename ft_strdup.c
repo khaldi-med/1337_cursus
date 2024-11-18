@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:55:07 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/10 21:54:47 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 04:24:41 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*new;
-	char	*n_str;
+	size_t len;
+	char *new_s;
 
-	new = malloc(ft_strlen(s) + 1);
-	if (!new)
+	len = ft_strlen(s) + 1;
+	new_s = malloc(len);
+	
+	if (!new_s)
 		return (NULL);
-	n_str = new;
-	while (*s != '\0')
-	{
-		*new = *s;
-		new ++;
-		s++;
-	}
-	*new = '\0';
-	return (n_str);
+
+	ft_memcpy(new_s, s, len);
+	return (new_s);
 }
