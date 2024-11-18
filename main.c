@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/18 01:53:19 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:31:28 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,29 @@
 #include <string.h>
 #include <unistd.h>
 
+char	to_uppercase(unsigned int i, char c)
+{
+	(void)i; // Unused parameter
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+
 int	main(void)
 {
-	const char	*numStr = " 1231231231311133";
-	int			num;
+	char	*str;
+	char	*result;
 
-	num = ft_atoi(numStr);
-	printf("Converted integer: %d\n", num);
-	printf("Converted integer: %d\n", atoi(numStr));
+	str = "Hello, World!";
+	result = ft_strmapi(str, to_uppercase);
+	if (result)
+	{
+		printf("Transformed string: %s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Failed to transform string.\n");
+	}
 	return (0);
 }

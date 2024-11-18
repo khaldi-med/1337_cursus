@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 02:38:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/11 20:04:29 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:18:57 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	wrd_c = ft_count_w(s, c);
-	new_s = (char **)malloc(sizeof(char *) * (wrd_c + 1));
+	new_s =(char **) malloc(sizeof(char *) * (wrd_c + 1));
 	if (!new_s)
 		return (NULL);
 	i = 0;
