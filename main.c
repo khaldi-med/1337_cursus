@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/18 05:31:28 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:46:19 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,17 @@
 #include <string.h>
 #include <unistd.h>
 
-char	to_uppercase(unsigned int i, char c)
+void	to_lowercase(unsigned int i, char *c)
 {
 	(void)i; // Unused parameter
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	if (*c >= 'A' && *c <= 'Z')
+		*c += 32;
 }
 
 int	main(void)
 {
-	char	*str;
-	char	*result;
-
-	str = "Hello, World!";
-	result = ft_strmapi(str, to_uppercase);
-	if (result)
-	{
-		printf("Transformed string: %s\n", result);
-		free(result);
-	}
-	else
-	{
-		printf("Failed to transform string.\n");
-	}
+	char	str[] = "HeLLo, WoRLd!";
+	ft_striteri(str, to_lowercase);
+	printf("Modified string: %s\n", str);
 	return (0);
 }

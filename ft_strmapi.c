@@ -6,13 +6,13 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 05:39:20 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/18 05:28:12 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:33:41 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_new_smapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new_s;
 	unsigned int	len;
