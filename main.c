@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/18 01:22:59 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 01:53:19 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@
 
 int	main(void)
 {
-	char	src1[14] = "ABCDEFGH";
-	char	src2[14] = "ABCDEFGH";
+	const char	*numStr = " 1231231231311133";
+	int			num;
 
-	ft_memcpy(src1, src1 + 2, 4);
-	printf("my: %s\n", src1);
-	memmove(src2, src2 + 2, 4);
-	printf("or: %s\n", src2);
+	num = ft_atoi(numStr);
+	printf("Converted integer: %d\n", num);
+	printf("Converted integer: %d\n", atoi(numStr));
 	return (0);
 }
