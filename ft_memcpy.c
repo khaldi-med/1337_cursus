@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 02:49:55 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/17 11:35:33 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 01:31:14 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	*ft_memcpy(void *to, const void *from, size_t n)
 {
 	const unsigned char	*src;
-	unsigned char	*dst;
+	unsigned char		*dst;
 
+	if (!to && !from)
+		return (NULL);
 	src = from;
 	dst = to;
 	while (n--)
