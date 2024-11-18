@@ -6,7 +6,8 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/18 02:28:28 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 07:02:53 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:46:19 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +20,19 @@
 #include <string.h>
 #include <unistd.h>
 
-int	main(void)
+void	to_lowercase(unsigned int i, char *c)
 {
 	printf("%s\n", ft_itoa(-2));
+	(void)i; // Unused parameter
+	if (*c >= 'A' && *c <= 'Z')
+		*c += 32;
+}
+
+int	main(void)
+{
+	char	str[] = "HeLLo, WoRLd!";
+
+	ft_striteri(str, to_lowercase);
+	printf("Modified string: %s\n", str);
 	return (0);
 }
