@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 05:14:29 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/07 06:21:46 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/18 01:55:44 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	t_s = count * size;
 	value = malloc(t_s);
-	if (value)
-		return (ft_memset(value, 0, t_s));
+	if (!value)
+		return (NULL);
+	ft_bzero(value, t_s);
 	return (value);
 }

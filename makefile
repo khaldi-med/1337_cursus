@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/15 20:25:08 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/17 12:30:55 by mohkhald         ###   ########.fr        #
+#    Created: 2024/11/18 06:59:20 by mohkhald          #+#    #+#              #
+#    Updated: 2024/11/18 07:00:29 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
         ft_putstr_fd.c ft_calloc.c ft_isalnum.c ft_isascii.c\
