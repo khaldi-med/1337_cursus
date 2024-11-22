@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 23:15:23 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 08:11:36 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/20 04:54:47 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/21 02:58:38 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	*ft_memmove(void *to, const void *from, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	const unsigned char	*src;
-	unsigned char		*dst;
+	t_list	*new_node;
 
-	src = from;
-	dst = to;
-	if (!from && !to && size)
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	if (src == dst)
-		return (dst);
-	if (dst < src)
-	{
-		while (size--)
-			*dst++ = *src++;
-	}
-	else
-	{
-		dst += size;
-		src += size;
-		while (size--)
-			*--dst = *--src;
-	}
-	return (to);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }

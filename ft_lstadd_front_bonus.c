@@ -1,39 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 23:15:23 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 08:11:36 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/20 05:09:22 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/20 08:29:48 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	*ft_memmove(void *to, const void *from, size_t size)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	const unsigned char	*src;
-	unsigned char		*dst;
-
-	src = from;
-	dst = to;
-	if (!from && !to && size)
-		return (NULL);
-	if (src == dst)
-		return (dst);
-	if (dst < src)
-	{
-		while (size--)
-			*dst++ = *src++;
-	}
-	else
-	{
-		dst += size;
-		src += size;
-		while (size--)
-			*--dst = *--src;
-	}
-	return (to);
 }

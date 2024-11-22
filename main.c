@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 23:15:23 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 08:11:36 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/22 08:06:01 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
+#include <fcntl.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
-void	*ft_memmove(void *to, const void *from, size_t size)
+int	main(int ac, char **av)
 {
-	const unsigned char	*src;
-	unsigned char		*dst;
-
-	src = from;
-	dst = to;
-	if (!from && !to && size)
-		return (NULL);
-	if (src == dst)
-		return (dst);
-	if (dst < src)
+	if (ac == 2)
 	{
-		while (size--)
-			*dst++ = *src++;
+		printf("ft_atoi: %d\n", ft_atoi(av[1]));
+		printf("atoi: %d\n", atoi(av[1]));
 	}
-	else
-	{
-		dst += size;
-		src += size;
-		while (size--)
-			*--dst = *--src;
-	}
-	return (to);
+	return (0);
 }

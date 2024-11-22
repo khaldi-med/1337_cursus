@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/18 07:26:08 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/22 08:00:28 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,33 +19,54 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
         ft_putchar_fd.c ft_strtrim.c ft_toupper.c ft_tolower.c \
         ft_itoa.c ft_substr.c ft_strchr.c ft_strncmp.c \
         ft_strnstr.c ft_strrchr.c ft_strjoin.c ft_strdup.c\
-        ft_putnbr_fd.c\
+        ft_putnbr_fd.c
 
+
+BONS_SRCS =  ft_lstnew_bonus.c
+
+
+NAME = libft.a
 
 
 OBJ = $(SRCS:.c=.o)
 
-NAME = libft.a
+
+BONS_OBJ = $(BONS_SRCS:.c=.o)
+
 
 CC = cc
+
 
 FLAGS = -Wall -Wextra -Werror
 
 
-%.o: %.c libft.h
-	@$(CC) $(FLAGS) -c $< -o $@
+all: $(NAME)
+
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 
-all: $(NAME)
+
+%.o: %.c libft.h libft_bonus.h
+	@$(CC) $(FLAGS) -c $< -o $@
+
+
+bonus: $(BONS_OBJ)
+	@ar rcs $(NAME) $(BONS_OBJ)
+
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) $(BONS_OBJ)
+
 
 fclean: clean
 	@rm -f $(NAME)
 
+
 re: fclean all
 
-.PHONY: all clean fclean re
+
+reb: fclean bonus
+
+
+.PHONY: all bonus clean fclean re

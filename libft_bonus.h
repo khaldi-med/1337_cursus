@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   libft_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 23:15:23 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 08:11:36 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/20 05:01:00 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/21 02:57:42 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
-void	*ft_memmove(void *to, const void *from, size_t size)
+// C Librarys
+# include <stddef.h>
+# include <stdlib.h>
+
+// Libft Bonus Part
+
+typedef struct s_list
 {
-	const unsigned char	*src;
-	unsigned char		*dst;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-	src = from;
-	dst = to;
-	if (!from && !to && size)
-		return (NULL);
-	if (src == dst)
-		return (dst);
-	if (dst < src)
-	{
-		while (size--)
-			*dst++ = *src++;
-	}
-	else
-	{
-		dst += size;
-		src += size;
-		while (size--)
-			*--dst = *--src;
-	}
-	return (to);
-}
+t_list				*ft_lstnew(void *content);
+
+void				ft_lstadd_front(t_list **lst, t_list *new);
+#endif
