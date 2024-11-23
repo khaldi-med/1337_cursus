@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 03:16:17 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/23 06:31:56 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 // My libft functions
 
