@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 02:46:27 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 03:15:11 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/24 05:52:10 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 		n = (n * 10) + (*s - '0');
 		if (sing == 1 && n > LLONG_MAX)
 			return (-1);
-		else if (sing == -1 && n > (unsigned long long)LLONG_MAX)
+		else if (sing == -1 && n > LLONG_MAX)
 			return (0);
 		s++;
 	}

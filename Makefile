@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/22 08:00:28 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/23 06:43:41 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +43,12 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 
-$(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
-
-
 %.o: %.c libft.h libft_bonus.h
 	@$(CC) $(FLAGS) -c $< -o $@
+
+
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 
 bonus: $(BONS_OBJ)
