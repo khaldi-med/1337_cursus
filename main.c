@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/22 08:06:01 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/24 06:31:51 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,19 @@
 #include <string.h>
 #include <unistd.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	if (ac == 2)
+	char	**result;
+	char	*s;
+	char	c;
+
+	s = "hello from morocco";
+	c = 'o';
+	result = ft_split(s, c);
+	if (result)
 	{
-		printf("ft_atoi: %d\n", ft_atoi(av[1]));
-		printf("atoi: %d\n", atoi(av[1]));
+		for (int i = 0; result[i]; i++)
+			printf("%s\n", result[i]);
 	}
 	return (0);
 }
