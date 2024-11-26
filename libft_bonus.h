@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 05:01:00 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 12:00:06 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:25:48 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ t_list				*ft_lstlast(t_list *lst);
 
 void				ft_lstadd_front(t_list **lst, t_list *new);
 
+void				ft_lstadd_back(t_list **lst, t_list *new); 
 int					ft_lstsize(t_list *lst);
 
 #endif

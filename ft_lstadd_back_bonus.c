@@ -6,11 +6,15 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:20:04 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 12:20:41 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:27:50 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_bonus.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new){
+/*
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
 }
+*
+*/
