@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 12:56:33 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:33:05 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,15 @@ int	main(void)
 	t_list	*tow;
 	int		size;
 
-	head = NULL;
 	o = 1;
 	t = 2;
 	one = ft_lstnew(&o);
 	tow = ft_lstnew(&t);
 	ft_lstadd_front(&head, tow);
-	ft_lstadd_front(&head, one);
+	ft_lstadd_back(&head, one);
 	size = ft_lstsize(head);
+	t_list *last = ft_lstlast(head);
 	printf("%d\n", size);
+	printf("%d\n", *(int*)last->content);
 	return (0);
 }
