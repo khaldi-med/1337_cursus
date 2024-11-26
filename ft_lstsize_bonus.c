@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:46:36 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 10:52:59 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:55:21 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_lstsize(t_list *lst)
 	while (node != NULL)
 	{
 		count++;
-		node->next = lst;
+		node = node->next;
 	}
 	return (count);
 }

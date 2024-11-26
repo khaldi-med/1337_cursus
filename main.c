@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 12:42:21 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:56:33 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,23 @@
 #include <string.h>
 #include <unistd.h>
 
-
 int	main(void)
 {
-	t_list *head = NULL;
-	//
-	int o = 1;
-	int t = 2;
-	//
-	t_list *one = ft_lstnew(&o);
-	t_list *tow = ft_lstnew(&t);
-	//
+	t_list	*head;
+	int		o;
+	int		t;
+	t_list	*one;
+	t_list	*tow;
+	int		size;
+
+	head = NULL;
+	o = 1;
+	t = 2;
+	one = ft_lstnew(&o);
+	tow = ft_lstnew(&t);
 	ft_lstadd_front(&head, tow);
 	ft_lstadd_front(&head, one);
-
-	//
-	t_list *last = ft_lstlast(head);
-	//
-	printf("%d\n", *(int*)one->content);
-	printf("%d\n", *(int*)last->content);
-
+	size = ft_lstsize(head);
+	printf("%d\n", size);
 	return (0);
 }
