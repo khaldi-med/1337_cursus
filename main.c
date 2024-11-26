@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:39:31 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 09:40:19 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/26 11:59:02 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@
 
 int	main(void)
 {
+	t_list *head = NULL;
 	int o = 1;
 	int t = 2;
 	int th = 3;
 	t_list *one = ft_lstnew(&o);
 	t_list *two = ft_lstnew(&t);
-	t_list *three= ft_lstnew(&th);
+	t_list *three= ft_lst(&th);
 	printf("%d\n", *(int*)one->content);
 	printf("%d\n", *(int*)two->content);
 	printf("%d\n", *(int*)three->content);

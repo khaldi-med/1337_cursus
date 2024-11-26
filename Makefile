@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/24 09:12:13 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/26 12:02:38 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
         ft_putnbr_fd.c
 
 
-BONS_SRCS =  ft_lstnew_bonus.c
+BONS_SRCS =  ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
+			 ft_lstsize_bonus.c ft_lstlast_bonus.c\
+			 ft_lstadd_back_bonus.c
 
 
 NAME = libft.a

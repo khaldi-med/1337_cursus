@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 05:01:00 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 12:00:06 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/26 10:54:01 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/26 11:57:28 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft_bonus.h"
 
-// C Librarys
-# include <stddef.h>
-# include <stdlib.h>
-
-// Libft Bonus Part
-
-typedef struct s_list
+t_list	*ft_lstlast(t_list *lst)
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-t_list				*ft_lstnew(void *content);
-
-t_list				*ft_lstlast(t_list *lst);
-
-void				ft_lstadd_front(t_list **lst, t_list *new);
-
-int					ft_lstsize(t_list *lst);
-
-#endif
+		t_list *node = lst;
+		while(node != NULL)
+		{
+			node->next = lst;
+		}
+		return node;
+}
