@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 05:09:22 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 10:45:29 by mohkhald         ###   ########.fr       */
+/*   Created: 2024/11/26 10:46:36 by mohkhald          #+#    #+#             */
+/*   Updated: 2024/11/26 10:52:59 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_bonus.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	if(!new)
-		return;
-	new->next = *lst;
-	*lst = new;
+	int		count;
+	t_list	*node;
+
+	node = lst;
+	count = 0;
+	while (node != NULL)
+	{
+		count++;
+		node->next = lst;
+	}
+	return (count);
 }
