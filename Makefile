@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/26 12:02:38 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/27 23:18:37 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,8 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
 
 
 BONS_SRCS =  ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
-			 ft_lstsize_bonus.c ft_lstlast_bonus.c\
-			 ft_lstadd_back_bonus.c
+	     ft_lstsize_bonus.c ft_lstlast_bonus.c\
+	     ft_lstadd_back_bonus.c
 
 
 NAME = libft.a
@@ -45,7 +45,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 
-%.o: %.c libft.h libft_bonus.h
+%.o: %.c libft.h
 	@$(CC) $(FLAGS) -c $< -o $@
 
 
@@ -66,9 +66,6 @@ fclean: clean
 
 
 re: fclean all
-
-
-reb: fclean bonus
 
 
 .PHONY: all bonus clean fclean re

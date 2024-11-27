@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 23:15:23 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/24 05:57:06 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/27 23:31:12 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 	if (!from && !to && size)
 		return (NULL);
 	if (src == dst)
-		return (dst);
+		return (to);
 	if (dst < src)
 	{
 		while (size--)

@@ -6,11 +6,11 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:54:01 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/26 18:10:56 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/27 23:19:51 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
