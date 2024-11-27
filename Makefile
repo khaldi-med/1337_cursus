@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/27 23:33:07 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/27 23:54:00 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,7 @@ SRCS =  ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_atoi.c\
         ft_strnstr.c ft_strrchr.c ft_strjoin.c ft_strdup.c\
         ft_putnbr_fd.c
 
-
-BONS_SRCS =  ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
+BSRCS =  ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
 	     ft_lstsize_bonus.c ft_lstlast_bonus.c\
 	     ft_lstadd_back_bonus.c
 
@@ -33,7 +32,7 @@ NAME = libft.a
 OBJ = $(SRCS:.c=.o)
 
 
-BONS_OBJ = $(BONS_SRCS:.c=.o)
+BOBJ = $(BSRCS:.c=.o)
 
 
 CC = cc
@@ -53,12 +52,12 @@ $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 
 
-bonus: $(BONS_OBJ)
-	@ar rcs $(NAME) $(BONS_OBJ)
+bonus: $(BOBJ)
+	@ar rcs $(NAME) $(BOBJ)
 
 
 clean:
-	@rm -f $(OBJ) $(BONS_OBJ)
+	@rm -f $(OBJ) $(BOBJ)
 
 
 fclean: clean
