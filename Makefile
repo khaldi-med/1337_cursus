@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/28 13:24:07 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/28 16:01:12 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,26 +42,26 @@ FLAGS = -Wall -Wextra -Werror
 
 
 %.o: %.c libft.h
-	@$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 
 all: $(NAME)
 
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 
 bonus: $(BOBJ)
-	@ar rcs $(NAME) $(BOBJ)
+	ar rcs $(NAME) $(BOBJ)
 
 
 clean:
-	@rm -f $(OBJ) $(BOBJ)
+	rm -f $(OBJ) $(BOBJ)
 
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 
 re: fclean all
