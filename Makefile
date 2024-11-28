@@ -6,7 +6,7 @@
 #    By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 07:11:28 by mohkhald          #+#    #+#              #
-#    Updated: 2024/11/27 23:54:00 by mohkhald         ###   ########.fr        #
+#    Updated: 2024/11/28 13:24:07 by mohkhald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,11 +41,11 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 
-all: $(NAME)
-
-
 %.o: %.c libft.h
 	@$(CC) $(FLAGS) -c $< -o $@
+
+
+all: $(NAME)
 
 
 $(NAME): $(OBJ)

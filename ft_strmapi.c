@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 05:39:20 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/25 10:29:14 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:59:42 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_s = malloc(len + 1);
 	if (!new_s)
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		new_s[i] = f(i, s[i]);
 		i++;

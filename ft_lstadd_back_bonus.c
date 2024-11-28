@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:20:04 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/27 23:19:31 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/11/28 14:38:54 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*end;
 
-	if (lst == NULL)
+	if (!lst || !new)
 		return ;
-	if (*lst == NULL)
-	{
+	if (!*lst)
 		*lst = new;
-		return ;
+	else{
+		end = ft_lstlast(*lst);
+		end->next = new;
 	}
-	end = ft_lstlast(*lst);
-	end->next = new;
 }
