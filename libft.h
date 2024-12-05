@@ -6,7 +6,7 @@
 /*   By: mohkhald <mohkhald@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 23:44:52 by mohkhald          #+#    #+#             */
-/*   Updated: 2024/11/30 19:31:42 by mohkhald         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:59:20 by mohkhald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+// My libft functions
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-// My libft functions
 
 // Part I
 void				ft_bzero(void *s, size_t n);
